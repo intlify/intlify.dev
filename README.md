@@ -1,4 +1,4 @@
-# intlify.dev
+# :globe_with_meridians: intlify.dev
 
 website for inlitfy
 
