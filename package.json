@@ -1,0 +1,18 @@
+{
+  "name": "intlify.dev",
+  "description": "The borderless internationalization",
+  "version": "0.0.1",
+  "author": {
+    "name": "kazuya kawaguchi",
+    "email": "kawakazu80@gmail.com"
+  },
+  "dependencies": {
+    "vuepress": "^1.0.3"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "vuepress build docs",
+    "dev": "vuepress dev docs"
+  }
+}
