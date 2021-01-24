@@ -1,0 +1,8 @@
+@tailwind base;
+
+html {
+  @apply font-intlify;
+}
+
+@tailwind components;
+@tailwind utilities;
