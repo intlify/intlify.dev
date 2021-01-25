@@ -1,9 +1,11 @@
 <script setup lang="ts">
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Navigation from './Navigation.vue'
 import Hero from './Hero.vue'
 import Sponsor from './Sponsor.vue'
 import Project from './Project.vue'
 import Info from './Info.vue'
+/* eslint-enable @typescript-eslint/no-unused-vars */
 </script>
 
 <template>
