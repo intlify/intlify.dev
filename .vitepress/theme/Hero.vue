@@ -33,7 +33,7 @@
 }
 
 .tagline {
-  @apply text-center font-extrabold text-5xl
-    md:text-left md:my-6 md:py-6;
+  @apply text-center font-extrabold text-4xl
+    md:text-left md:my-6 md:py-6 md:text-5xl;
 }
 </style>

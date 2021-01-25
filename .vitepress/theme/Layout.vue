@@ -25,13 +25,13 @@ import Info from './Info.vue'
         <div class="inner">
           <p>
             Intlify is a project that aims to improve Developer Experience in
-            software internationalization.We aim to improve the Developer
+            software internationalization. We will aim to improve the Developer
             Experience of internationalization by providing libraries,
             frameworks, and tools that break down barriers to
             internationalization.
           </p>
           <p>
-            We will also aim to improve the localization experience by providing
+            We will also aim to improve the Localization Experience by providing
             software that is easy to localize.
           </p>
         </div>
@@ -59,21 +59,21 @@ import Info from './Info.vue'
             class="button white"
             href="https://github.com/sponsors/kazupon?o=esc"
           >
-            Become a Sponsor
+            Become a Supporting
           </a>
         </div>
       </section>
 
       <section class="projects layouts">
         <div class="inner">
-          <h2>Projects</h2>
+          <h2>Open Source Projects</h2>
           <Project :banners="$site.customData.projects" />
           <!-- eslint-disable-next-line prettier/prettier -->
           <a
             class="button white"
             href="https://github.com/intlify"
           >
-            See more Projects
+            See more Open Source Projects
           </a>
         </div>
       </section>
@@ -128,9 +128,12 @@ import Info from './Info.vue'
   @apply text-2xl mb-6;
 }
 
-.sponsors a.button,
+.sponsors a.button {
+  @apply mx-4 mt-14 w-60;
+}
+
 .projects a.button {
-  @apply mx-4 mt-14 w-52;
+  @apply mx-4 mt-14 w-72;
 }
 
 .footer {
