@@ -57,6 +57,7 @@ import Info from './Info.vue'
             :banners="$site.customData.sponsors.bronze"
             tier="bronze"
           />
+          <!-- eslint-disable-next-line prettier/prettier -->
           <a
             class="button"
             href="https://github.com/sponsors/kazupon?o=esc"
