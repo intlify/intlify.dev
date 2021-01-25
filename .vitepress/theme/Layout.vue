@@ -58,7 +58,7 @@ import Info from './Info.vue'
             tier="bronze"
           />
           <a
-            class="button white"
+            class="button"
             href="https://github.com/sponsors/kazupon?o=esc"
           >
             Become a Supporting
@@ -72,7 +72,7 @@ import Info from './Info.vue'
           <Project :banners="$site.customData.projects" />
           <!-- eslint-disable-next-line prettier/prettier -->
           <a
-            class="button white"
+            class="button"
             href="https://github.com/intlify"
           >
             See more Open Source Projects

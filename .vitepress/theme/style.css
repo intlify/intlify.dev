@@ -14,7 +14,7 @@
 .button {
   background-color: var(--c-brand);
   border: 1px solid var(--c-brand);
-  @apply inline-block text-white
+  @apply inline-block text-black
     transition-all duration-150 ease-in
     font-semibold
     px-1 py-2 rounded-2xl box-border;
