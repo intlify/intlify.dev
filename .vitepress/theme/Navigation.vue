@@ -19,6 +19,8 @@
         <a
           :href="link"
           :aria-label="text" 
+          target="_blank"
+          rel="noopener"
         >
           {{ text }}
         </a>
