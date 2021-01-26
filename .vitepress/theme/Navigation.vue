@@ -29,7 +29,7 @@
 
 <style scoped>
 .navigation {
-  @apply flex justify-between items-center py-6 font-bold;
+  @apply flex justify-between items-center py-2 font-bold;
 }
 
 .logo a {

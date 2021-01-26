@@ -10,7 +10,7 @@ import Info from './Info.vue'
 
 <template>
   <div class="antialiased">
-    <header class="h-auto layouts">
+    <header class="header layouts">
       <Navigation />
     </header>
 
@@ -95,12 +95,16 @@ import Info from './Info.vue'
   @apply px-6 sm:px-6 xl:px-6;
 }
 
+.header {
+  @apply fixed w-full h-auto bg-white;
+}
+
 .contents {
-  @apply h-auto;
+  @apply relative h-auto;
 }
 
 .hero {
-  @apply pt-6;
+  @apply pt-16;
 }
 
 .about {
