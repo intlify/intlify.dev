@@ -36,7 +36,7 @@
     "format:fix": "yarn format --write",
     "lint": "npm-run-all --parallel lint:eslint lint:vuedx",
     "lint:eslint": "eslint .vitepress --ext .ts,.js,.vue",
-    "lint:vuedx": "vuedx-typecheck --vue",
+    "lint:vuedx": "npx vuedx-typecheck --vue",
     "lint:fix": "yarn lint:eslint --fix",
     "serve": "vitepress serve"
   }
