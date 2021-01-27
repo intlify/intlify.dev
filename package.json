@@ -34,7 +34,7 @@
     "fix": "npm-run-all --parallel lint:fix format:fix",
     "format": "prettier --config .prettierrc --ignore-path .prettierignore '**/*.{ts,js,html,json}'",
     "format:fix": "yarn format --write",
-    "lint": "npm-run-all --parallel lint:eslint lint:vuedx",
+    "lint": "npm-run-all --parallel lint:eslint",
     "lint:eslint": "eslint .vitepress --ext .ts,.js,.vue",
     "lint:vuedx": "npx vuedx-typecheck --vue",
     "lint:fix": "yarn lint:eslint --fix",
