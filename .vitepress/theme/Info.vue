@@ -8,7 +8,6 @@
     </p>
     <p class="text-white text-center">
       Logo art designed by
-      <!-- eslint-disable-next-line prettier/prettier -->
       <a
         href="https://www.ceroan.co.jp/"
         aria-label="ceroan LLC"

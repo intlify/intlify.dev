@@ -15,7 +15,6 @@
     "autoprefixer": "^10.2.1",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.0.0",
-    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^7.5.0",
     "eslint-plugin-vue-libs": "^4.0.0",
     "npm-run-all": "^4.1.5",
@@ -35,8 +34,10 @@
     "fix": "npm-run-all --parallel lint:fix format:fix",
     "format": "prettier --config .prettierrc --ignore-path .prettierignore '**/*.{ts,js,html,json}'",
     "format:fix": "yarn format --write",
-    "lint": "eslint .vitepress --ext .ts,.js,.vue",
-    "lint:fix": "yarn lint --fix",
+    "lint": "npm-run-all --parallel lint:eslint lint:vuedx",
+    "lint:eslint": "eslint .vitepress --ext .ts,.js,.vue",
+    "lint:vuedx": "vuedx-typecheck --vue",
+    "lint:fix": "yarn lint:eslint --fix",
     "serve": "vitepress serve"
   }
 }

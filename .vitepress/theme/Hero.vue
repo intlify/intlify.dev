@@ -8,7 +8,6 @@
       />
     </figure>
     <div class="right">
-      <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
       <h1 class="tagline">The Borderless<br />Internationalization</h1>
     </div>
   </div>

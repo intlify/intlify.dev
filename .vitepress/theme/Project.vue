@@ -17,7 +17,6 @@ defineProps<{
         target="_blank"
         rel="noopener"
       >
-        <!-- eslint-disable-next-line prettier/prettier -->
         <img
           class="common"
           :src="logo"

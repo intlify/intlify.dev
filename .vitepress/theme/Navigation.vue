@@ -1,12 +1,10 @@
 <template>
   <nav class="navigation">
     <div class="logo">
-      <!-- eslint-disable-next-line prettier/prettier -->
       <a
-        href="/"
         :aria-label="$site.title"
+        href="/"
       >
-        <!-- eslint-disable-next-line prettier/prettier -->
         <img
           :src="$withBase($themeConfig.logo)"
           :alt="$site.title"
@@ -15,7 +13,6 @@
     </div>
     <div class="menu">
       <template v-for="{ text, link } in $themeConfig.nav">
-        <!-- eslint-disable-next-line prettier/prettier -->
         <a
           :href="link"
           :aria-label="text" 

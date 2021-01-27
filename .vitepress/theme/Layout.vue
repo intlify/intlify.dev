@@ -14,7 +14,6 @@ import Info from './Info.vue'
       <Navigation />
     </header>
 
-    <!-- eslint-disable-next-line prettier/prettier -->
     <main
       class="contents"
       aria-labelledby="main-title"
@@ -42,22 +41,18 @@ import Info from './Info.vue'
       <section class="sponsors layouts">
         <div class="inner">
           <h2>Sponsors</h2>
-          <!-- eslint-disable-next-line prettier/prettier -->
           <Sponsor
             :banners="$site.customData.sponsors.gold"
             tier="gold"
           />
-          <!-- eslint-disable-next-line prettier/prettier -->
           <Sponsor
             :banners="$site.customData.sponsors.sliver"
             tier="silver"
           />
-          <!-- eslint-disable-next-line prettier/prettier -->
           <Sponsor
             :banners="$site.customData.sponsors.bronze"
             tier="bronze"
           />
-          <!-- eslint-disable-next-line prettier/prettier -->
           <a
             class="button"
             href="https://github.com/sponsors/kazupon?o=esc"
@@ -71,7 +66,6 @@ import Info from './Info.vue'
         <div class="inner">
           <h2>Open Source Projects</h2>
           <Project :banners="$site.customData.projects" />
-          <!-- eslint-disable-next-line prettier/prettier -->
           <a
             class="button"
             href="https://github.com/intlify"
