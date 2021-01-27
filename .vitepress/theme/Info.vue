@@ -12,6 +12,7 @@
         href="https://www.ceroan.co.jp/"
         aria-label="ceroan LLC"
         target="_blank"
+        rel="noopener"
       >
         ceroan LLC
       </a>
