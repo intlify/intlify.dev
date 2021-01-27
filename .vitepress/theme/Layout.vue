@@ -14,10 +14,7 @@ import Info from './Info.vue'
       <Navigation />
     </header>
 
-    <main
-      class="contents"
-      aria-labelledby="main-title"
-    >
+    <main class="contents">
       <section class="hero layouts">
         <Hero />
       </section>
