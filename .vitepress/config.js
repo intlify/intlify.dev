@@ -99,6 +99,11 @@ const config = {
           title: 'Sendcloud',
           link: 'https://www.sendcloud.com',
           logo: 'sponsors/sendcloud.png'
+        },
+        {
+          title: 'VueMastery',
+          link: 'https://www.vuemastery.com/',
+          logo: 'sponsors/vuemastery.png'
         }
       ]
     }
