@@ -1,3 +1,24 @@
+<script setup lang="ts">
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useSiteData, useRouter } from 'vitepress'
+
+const LOCALE_INFO = {
+  en: 'English',
+  ja: '日本語'
+} as const
+
+const router = useRouter()
+const siteData = useSiteData()
+const locales = Object.keys(siteData.value.locales).map(k => {
+  const lang = siteData.value.locales[k].lang
+  return { locale: lang, display: LOCALE_INFO[lang] }
+})
+
+const onChange = e => {
+  router.go(e.target.value === 'en' ? '/' : `/${e.target.value}/`)
+}
+</script>
+
 <template>
   <nav class="navigation">
     <div class="logo">
@@ -22,6 +43,17 @@
           {{ text }}
         </a>
       </template>
+      <form class="locale">
+        <select @change="onChange">
+          <option 
+            v-for="{ locale, display } in locales"
+            :selected="$i18n.locale === locale"
+            :value="locale"
+          >
+            {{ display }}
+          </option>
+        </select>
+      </form>
     </div>
   </nav>
 </template>
@@ -45,5 +77,10 @@
 
 .menu a {
   @apply hover:text-gray-700 mr-4;
+}
+
+.menu .locale {
+  @apply inline-block transition-colors duration-300
+    ease-linear text-gray-700 rounded-full;
 }
 </style>

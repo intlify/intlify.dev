@@ -1,12 +1,33 @@
 <script setup lang="ts">
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { useI18n } from 'vue-i18n'
 import Navigation from './Navigation.vue'
 import Hero from './Hero.vue'
 import Sponsor from './Sponsor.vue'
 import Project from './Project.vue'
 import Info from './Info.vue'
-/* eslint-enable @typescript-eslint/no-unused-vars */
+
+const { t } = useI18n({
+  inheritLocale: true
+})
 </script>
+
+<i18n lang="yaml">
+en:
+  About1: Intlify is a project that aims to improve Developer Experience in software internationalization. We will aim to improve the Developer Experience of internationalization by providing libraries, frameworks, and tools that break down barriers to internationalization.
+  About2: We will also aim to improve the Localization Experience by providing software that is easy to localize.
+  SponsorTitle: Sponsors
+  SponsorButton: Become a Supporting
+  ProjectTitle: Open Source Projects
+  ProjectButton: See more Open Source Projects
+ja:
+  About1: Intlifyは、ソフトウェアの国際化における開発者エクスペリエンスの向上を目的としたプロジェクトです。国際化の障壁を打ち破るライブラリ、フレームワーク、ツールを提供することで、国際化の開発者エクスペリエンスの向上を目指します。
+  About2: また、ローカライズしやすいソフトウェアを提供することで、ローカリゼーションエクスペリエンスの向上を目指します。
+  SponsorTitle: スポンサー
+  SponsorButton: サポーターになる
+  ProjectTitle: オープンソースプロジェクト
+  ProjectButton: もっとプロジェクトを見る
+</i18n>
 
 <template>
   <div class="antialiased">
@@ -21,23 +42,14 @@ import Info from './Info.vue'
 
       <section class="about layouts">
         <div class="inner">
-          <p>
-            Intlify is a project that aims to improve Developer Experience in
-            software internationalization. We will aim to improve the Developer
-            Experience of internationalization by providing libraries,
-            frameworks, and tools that break down barriers to
-            internationalization.
-          </p>
-          <p>
-            We will also aim to improve the Localization Experience by providing
-            software that is easy to localize.
-          </p>
+          <p>{{ t('About1') }}</p>
+          <p>{{ t('About2') }}</p>
         </div>
       </section>
 
       <section class="sponsors layouts">
         <div class="inner">
-          <h2>Sponsors</h2>
+          <h2>{{ t('SponsorTitle') }}</h2>
           <Sponsor
             :banners="$site.customData.sponsors.gold"
             tier="gold"
@@ -54,20 +66,20 @@ import Info from './Info.vue'
             class="button"
             href="https://github.com/sponsors/kazupon?o=esc"
           >
-            Become a Supporting
+            {{ t('SponsorButton' )}}
           </a>
         </div>
       </section>
 
       <section class="projects layouts">
         <div class="inner">
-          <h2>Open Source Projects</h2>
+          <h2>{{ t('ProjectTitle') }}</h2>
           <Project :banners="$site.customData.projects" />
           <a
             class="button"
             href="https://github.com/intlify"
           >
-            See more Open Source Projects
+            {{ t('ProjectButton' )}}
           </a>
         </div>
       </section>

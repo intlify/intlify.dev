@@ -1,17 +1,38 @@
 <script setup lang="ts">
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { defineProps } from 'vue'
+import { useI18n } from 'vue-i18n'
 import type { Banner, Tier } from './types'
 
 defineProps<{
   banners: Banner[]
   tier: Tier
 }>()
+
+const { t } = useI18n({
+  inheritLocale: true
+})
 </script>
+
+<i18n>
+{
+  "en": {
+    "GOLD": "GOLD",
+    "SILVER": "SILVER",
+    "BRONZE": "BRONZE"
+  },
+  "ja": {
+    "GOLD": "ゴールド",
+    "SILVER": "シルバー",
+    "BRONZE": "ブロンズ"
+  }
+}
+</i18n>
 
 <template>
   <div class="sponsor">
     <h3 class="mb-6">
-      {{ tier.toUpperCase() }}
+      {{ t(tier.toUpperCase()) }}
     </h3>
     <template v-for="{ link, logo, title } in banners">
       <a

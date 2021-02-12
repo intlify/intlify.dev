@@ -1,3 +1,5 @@
+<script>/* eslint-disable @intlify/vue-i18n/no-raw-text */</script>
+
 <template>
   <div class="inner">
     <figure class="left">

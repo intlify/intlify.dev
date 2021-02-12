@@ -9,6 +9,7 @@ module.exports = {
   extends: [
     'plugin:vue-libs/recommended',
     'plugin:vue/vue3-recommended',
+    'plugin:@intlify/vue-i18n/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'prettier',
