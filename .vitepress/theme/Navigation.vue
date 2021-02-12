@@ -1,42 +1,21 @@
-<script lang="ts">
-import { useI18n } from 'vue-i18n'
-import { getCurrentInstance } from 'vue'
-import { useImportXXX } from './foo'
-import { useSiteData } from 'vitepress'
+<script setup lang="ts">
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useSiteData, useRouter } from 'vitepress'
 
-/*
-const i18n = useI18n()
-console.log('lsdkfjsdfi', i18n)
+const LOCALE_INFO = {
+  en: 'English',
+  ja: '日本語'
+} as const
+
+const router = useRouter()
 const siteData = useSiteData()
 const locales = Object.keys(siteData.value.locales).map(k => {
-  // const lang = siteData.value.locales[k].lang
-  // return { locale: lang, display: lang.toUpperCase() }
-  return siteData.value.locales[k].lang
+  const lang = siteData.value.locales[k].lang
+  return { locale: lang, display: LOCALE_INFO[lang] }
 })
-console.log('sitedata', locales)
-*/
-export default {
-  setup() {
-    const instance = getCurrentInstance()
-    console.log('instance', instance)
-    console.log('instance', getCurrentInstance())
-    useXXX()
-    useImportXXX()
-    const i18n = useI18n()
-    console.log('klsdkfjsdfi', i18n)
-    const siteData = useSiteData()
-    const locales = Object.keys(siteData.value.locales).map(k => {
-      // const lang = siteData.value.locales[k].lang
-      // return { locale: lang, display: lang.toUpperCase() }
-      return siteData.value.locales[k].lang
-    })
-    console.log('sitedata', locales) 
-    return { locales }
-  }
-}
 
-function useXXX() {
-  console.log('useXXX', getCurrentInstance())
+const onChange = e => {
+  router.go(e.target.value === 'en' ? '/' : `/${e.target.value}/`)
 }
 </script>
 
@@ -64,11 +43,15 @@ function useXXX() {
           {{ text }}
         </a>
       </template>
-      <form>
-        <select>
-          <option v-for="locale in locales" :value="locale"></option>
-          <option value="en-US">EN</option>
-          <option value="ja-JP">JP</option>
+      <form class="locale">
+        <select @change="onChange">
+          <option 
+            v-for="{ locale, display } in locales"
+            :selected="$i18n.locale === locale"
+            :value="locale"
+          >
+            {{ display }}
+          </option>
         </select>
       </form>
     </div>
@@ -94,5 +77,10 @@ function useXXX() {
 
 .menu a {
   @apply hover:text-gray-700 mr-4;
+}
+
+.menu .locale {
+  @apply inline-block transition-colors duration-300
+    ease-linear text-gray-700 rounded-full;
 }
 </style>

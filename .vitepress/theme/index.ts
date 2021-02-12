@@ -1,7 +1,8 @@
-import { createI18n } from 'vue-i18n'
 import './tailwind.css'
 import './style.css'
 import Layout from './Layout.vue'
+import { watch } from 'vue'
+import { createI18n } from 'vue-i18n'
 import messages from '@intlify/vite-plugin-vue-i18n/messages'
 
 export default {
@@ -15,12 +16,18 @@ export default {
       messages
     })
     app.use(i18n)
-    console.log('enhance', app, siteData, i18n)
-    // watch(siteData, (val, old) => {
-    //   console.log('siteData watch', val, old)
-    // })
-    // app is the Vue 3 app instance from createApp()
-    // router is VitePress' custom router (see `lib/app/router.js`)
-    // siteData is a ref of current site-level metadata.
+
+    const localeMap = Object.keys(siteData.value.locales).reduce(
+      (locales, key) => {
+        locales[key] = siteData.value.locales[key].lang
+        return locales
+      },
+      {} as Record<string, string>
+    )
+
+    // locale change via router path
+    watch(router.route, val => {
+      i18n.global.locale.value = localeMap[val.path]
+    })
   }
 }

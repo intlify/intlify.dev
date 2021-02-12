@@ -2,7 +2,7 @@ const head = require('./head')
 
 const mainInfo = {
   title: 'Intlify',
-  description: 'The Borderless Internationalization',
+  description: 'The Borderless Internationalization'
 }
 
 /**
@@ -35,7 +35,7 @@ const config = {
       '/ja/': {
         nav: [
           {
-            text: 'Blog',
+            text: 'ブログ',
             link: 'https://blog.intlify.dev'
           },
           {
@@ -51,12 +51,12 @@ const config = {
       {
         title: 'Vue I18n',
         link: 'https://github.com/kazupon/vue-i18n',
-        logo: 'projects/vue-i18n.png'
+        logo: '/projects/vue-i18n.png'
       },
       {
         title: 'ESLint Plugin Vue I18n',
         link: 'https://github.com/intlify/eslint-plugin-vue-i18n',
-        logo: 'projects/eslint-plugin-vue-i18n.png'
+        logo: '/projects/eslint-plugin-vue-i18n.png'
       }
     ],
     sponsors: {
@@ -64,7 +64,7 @@ const config = {
         {
           title: 'NuxtJS',
           link: 'https://nuxtjs.org',
-          logo: 'sponsors/nuxt.png'
+          logo: '/sponsors/nuxt.png'
         }
       ],
       sliver: [
@@ -72,24 +72,24 @@ const config = {
           title: 'BabelEdit',
           link:
             'https://www.codeandweb.com/babeledit?utm_campaign=vue-i18n-2019-01',
-          logo: 'sponsors/babeledit.png'
+          logo: '/sponsors/babeledit.png'
         }
       ],
       bronze: [
         {
           title: 'ZenArchitects',
           link: 'https://zenarchitects.co.jp',
-          logo: 'sponsors/zenarchitects.png'
+          logo: '/sponsors/zenarchitects.png'
         },
         {
           title: 'Sendcloud',
           link: 'https://www.sendcloud.com',
-          logo: 'sponsors/sendcloud.png'
+          logo: '/sponsors/sendcloud.png'
         },
         {
           title: 'VueMastery',
           link: 'https://www.vuemastery.com/',
-          logo: 'sponsors/vuemastery.png'
+          logo: '/sponsors/vuemastery.png'
         }
       ]
     }
