@@ -67,14 +67,7 @@ const config = {
           logo: '/sponsors/nuxt.png'
         }
       ],
-      sliver: [
-        {
-          title: 'BabelEdit',
-          link:
-            'https://www.codeandweb.com/babeledit?utm_campaign=vue-i18n-2019-01',
-          logo: '/sponsors/babeledit.png'
-        }
-      ],
+      sliver: [],
       bronze: [
         {
           title: 'ZenArchitects',
