@@ -3,8 +3,7 @@ import './style.css'
 import Layout from './Layout.vue'
 import { watch } from 'vue'
 import { createI18n } from 'vue-i18n'
-// TODO: SSR
-// import messages from '@intlify/vite-plugin-vue-i18n/messages'
+import messages from '@intlify/vite-plugin-vue-i18n/messages'
 
 export default {
   Layout,
@@ -14,7 +13,7 @@ export default {
       legacy: false,
       locale: siteData.value.lang,
       globalInjection: true,
-      messages: {}
+      messages
     })
     app.use(i18n)
 

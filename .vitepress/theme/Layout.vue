@@ -51,17 +51,14 @@ ja:
         <div class="inner">
           <h2>{{ t('SponsorTitle') }}</h2>
           <Sponsor
-            v-if="$site.customData.sponsors.gold.length"
             :banners="$site.customData.sponsors.gold"
             tier="gold"
           />
           <Sponsor
-            v-if="$site.customData.sponsors.sliver.length"
             :banners="$site.customData.sponsors.sliver"
             tier="silver"
           />
           <Sponsor
-            v-if="$site.customData.sponsors.bronze.length"
             :banners="$site.customData.sponsors.bronze"
             tier="bronze"
           />
