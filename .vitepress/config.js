@@ -65,15 +65,14 @@ const config = {
           title: 'NuxtJS',
           link: 'https://nuxtjs.org',
           logo: '/sponsors/nuxt.png'
+        },
+        {
+          title: 'RapidAPI',
+          link: 'https://rapidapi.com',
+          logo: '/sponsors/RapidAPI.png'
         }
       ],
       sliver: [
-        {
-          title: 'BabelEdit',
-          link:
-            'https://www.codeandweb.com/babeledit?utm_campaign=vue-i18n-2019-01',
-          logo: '/sponsors/babeledit.png'
-        }
       ],
       bronze: [
         {
