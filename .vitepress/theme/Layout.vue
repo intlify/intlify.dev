@@ -17,7 +17,7 @@ en:
   About1: Intlify is a project that aims to improve Developer Experience in software internationalization. We will aim to improve the Developer Experience of internationalization by providing libraries, frameworks, and tools that break down barriers to internationalization.
   About2: We will also aim to improve the Localization Experience by providing software that is easy to localize.
   SponsorTitle: Sponsors
-  SponsorButton: Become a Supporting
+  SponsorButton: Become a Supporter
   ProjectTitle: Open Source Projects
   ProjectButton: See more Open Source Projects
 ja:
