@@ -89,6 +89,11 @@ const config = {
           title: 'VueMastery',
           link: 'https://www.vuemastery.com/',
           logo: '/sponsors/vuemastery.png'
+        },
+        {
+          title: 'Storyblock',
+          link: 'https://www.storyblok.com/',
+          logo: '/sponsors/storyblok.svg'
         }
       ]
     }
