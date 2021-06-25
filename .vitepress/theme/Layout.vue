@@ -51,6 +51,10 @@ ja:
         <div class="inner">
           <h2>{{ t('SponsorTitle') }}</h2>
           <Sponsor
+            :banners="$site.customData.sponsors.platinum"
+            tier="platinum"
+          />
+          <Sponsor
             :banners="$site.customData.sponsors.gold"
             tier="gold"
           />

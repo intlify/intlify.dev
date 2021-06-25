@@ -60,6 +60,13 @@ const config = {
       }
     ],
     sponsors: {
+      platinum: [
+        {
+          title: 'ZenArchitects',
+          link: 'https://zenarchitects.co.jp',
+          logo: '/sponsors/zenarchitects.png'
+        }
+      ],
       gold: [
         {
           title: 'NuxtJS',
@@ -75,11 +82,6 @@ const config = {
       sliver: [
       ],
       bronze: [
-        {
-          title: 'ZenArchitects',
-          link: 'https://zenarchitects.co.jp',
-          logo: '/sponsors/zenarchitects.png'
-        },
         {
           title: 'Sendcloud',
           link: 'https://www.sendcloud.com',

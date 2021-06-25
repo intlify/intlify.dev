@@ -17,11 +17,13 @@ const { t } = useI18n({
 <i18n>
 {
   "en": {
+    "PLATINUM": "PLATINUM",
     "GOLD": "GOLD",
     "SILVER": "SILVER",
     "BRONZE": "BRONZE"
   },
   "ja": {
+    "PLATINUM": "プラチナ",
     "GOLD": "ゴールド",
     "SILVER": "シルバー",
     "BRONZE": "ブロンズ"
@@ -59,6 +61,10 @@ const { t } = useI18n({
 
 .common {
   @apply align-middle inline-block;
+}
+
+.platinum {
+  width: 30rem;
 }
 
 .gold {
