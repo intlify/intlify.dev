@@ -93,9 +93,9 @@ const config = {
           logo: '/sponsors/vuemastery.png'
         },
         {
-          title: 'Storyblock',
-          link: 'https://www.storyblok.com/',
-          logo: '/sponsors/storyblok.svg'
+          title: 'DECIBEL',
+          link: 'https://www.deci-bel.com/',
+          logo: '/sponsors/decibel.png'
         }
       ]
     }
