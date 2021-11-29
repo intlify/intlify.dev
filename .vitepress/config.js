@@ -77,6 +77,11 @@ const config = {
           title: 'RapidAPI',
           link: 'https://rapidapi.com',
           logo: '/sponsors/RapidAPI.png'
+        },
+        {
+          title: 'Cypress',
+          link: 'https://cypress.com',
+          logo: '/sponsors/cypress.svg'
         }
       ],
       sliver: [
