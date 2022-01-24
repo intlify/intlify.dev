@@ -18,12 +18,14 @@ const { t } = useI18n({
 {
   "en": {
     "PLATINUM": "PLATINUM",
+    "SPECIAL": "SPECIAL",
     "GOLD": "GOLD",
     "SILVER": "SILVER",
     "BRONZE": "BRONZE"
   },
   "ja": {
     "PLATINUM": "プラチナ",
+    "SPECIAL": "スペシャル",
     "GOLD": "ゴールド",
     "SILVER": "シルバー",
     "BRONZE": "ブロンズ"
@@ -65,6 +67,10 @@ const { t } = useI18n({
 
 .platinum {
   width: 30rem;
+}
+
+.special {
+  @apply w-60;
 }
 
 .gold {

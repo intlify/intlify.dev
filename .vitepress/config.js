@@ -67,6 +67,13 @@ const config = {
           logo: '/sponsors/zenarchitects.png'
         }
       ],
+      special: [
+        {
+          title: 'PLAID',
+          link: 'ttps://plaid.co.jp/',
+          logo: '/sponsors/plaid.svg'
+        }
+      ],
       gold: [
         {
           title: 'NuxtJS',
@@ -79,9 +86,9 @@ const config = {
           logo: '/sponsors/RapidAPI.png'
         },
         {
-          title: 'Cypress',
-          link: 'https://cypress.com',
-          logo: '/sponsors/cypress.svg'
+          title: 'Localazy',
+          link: 'https://localazy.com/blog/how-to-localize-vuejs-app-with-vue-i18n-and-localazy?utm_source=kazupon&utm_medium=banner&utm_campaign=sponsorships_kazupon&utm_content=logo',
+          logo: '/sponsors/localazy.svg'
         }
       ],
       sliver: [

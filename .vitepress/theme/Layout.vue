@@ -55,6 +55,10 @@ ja:
             tier="platinum"
           />
           <Sponsor
+            :banners="$site.customData.sponsors.special"
+            tier="special"
+          />
+          <Sponsor
             :banners="$site.customData.sponsors.gold"
             tier="gold"
           />
