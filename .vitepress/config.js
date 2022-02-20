@@ -70,7 +70,7 @@ const config = {
       special: [
         {
           title: 'PLAID',
-          link: 'ttps://plaid.co.jp/',
+          link: 'https://plaid.co.jp/',
           logo: '/sponsors/plaid.svg'
         }
       ],
