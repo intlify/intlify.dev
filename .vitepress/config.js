@@ -93,7 +93,7 @@ const config = {
         {
           title: 'Crowdin',
           link: 'https://crowdin.com/teams/engineering?utm_source=vue-i18n.intlify.dev&utm_medium=referral',
-          logo: '/sponsors/crowdin.png'
+          logo: '/sponsors/crowdin.svg'
         }
       ],
       sliver: [
