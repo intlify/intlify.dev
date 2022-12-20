@@ -76,9 +76,9 @@ const config = {
       ],
       gold: [
         {
-          title: 'NuxtJS',
-          link: 'https://nuxtjs.org',
-          logo: '/sponsors/nuxt.png'
+          title: 'NuxtLabs',
+          link: 'https://nuxtlabs.com/',
+          logo: '/sponsors/nuxtlabs.svg'
         },
         {
           title: 'RapidAPI',
