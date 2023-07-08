@@ -103,6 +103,11 @@ const config = {
           title: 'VueMastery',
           link: 'https://www.vuemastery.com/',
           logo: '/sponsors/vuemastery.png'
+        },
+        {
+          title: 'Froggly',
+          link: 'https://froggly.pl/',
+          logo: '/sponsors/Froggly.svg'
         }
       ]
     }
