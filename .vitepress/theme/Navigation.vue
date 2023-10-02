@@ -29,10 +29,10 @@ const siteNav = computed(() => {
   return site.value.themeConfig.nav
 })
 
-const onChange = (e: Event) => {
-  const target = e.target as HTMLInputElement
-  router.go(target.value === 'en' ? '/' : `/${target.value}`)
-}
+// DISABLE: const onChange = (e: Event) => {
+// DISABLE:   const target = e.target as HTMLInputElement
+// DISABLE:   router.go(target.value === 'en' ? '/' : `/${target.value}/`)
+// DISABLE: }
 </script>
 
 <template>
@@ -48,6 +48,7 @@ const onChange = (e: Event) => {
           {{ text }}
         </a>
       </template>
+      <!-- DISABLE:
       <form class="locale">
         <select @change="onChange">
           <option
@@ -59,7 +60,7 @@ const onChange = (e: Event) => {
           </option>
         </select>
       </form>
-    </div>
+    --></div>
   </nav>
 </template>
 

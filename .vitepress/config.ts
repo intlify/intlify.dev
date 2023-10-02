@@ -12,7 +12,7 @@ const mainInfo = {
 
 export default defineConfig({
   srcExclude: ['**/README.md'],
-  cleanUrls: true,
+  // cleanUrls: true,
   vite: {
     build: {
       minify: false

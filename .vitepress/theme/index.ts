@@ -9,7 +9,7 @@ import type { Theme } from 'vitepress'
 
 const LOCALE_PATH_MAP = {
   root: '/',
-  ja: '/ja'
+  ja: '/ja/'
 } as Record<string, string>
 
 export default {
@@ -36,11 +36,13 @@ export default {
 
     // TODO: should change to more smart way
     // locale change via router path
+    /* DISABLE
     watch(router.route, val => {
       console.log('watch route ...', val, i18n.global.locale)
       if (localeMap[val.path]) {
         i18n.global.locale.value = localeMap[val.path]
       }
     })
+    */
   }
 } satisfies Theme
