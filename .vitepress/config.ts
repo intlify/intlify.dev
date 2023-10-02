@@ -1,24 +1,74 @@
-const head = require('./head')
+import { resolve, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { defineConfig } from 'vitepress'
+import vueI18n from '@intlify/unplugin-vue-i18n/vite'
+
+import head from './head.ts'
 
 const mainInfo = {
   title: 'Intlify',
   description: 'The Borderless Internationalization'
 }
 
-/**
- * @type {UserConfig}
- */
-const config = {
+export default defineConfig({
+  srcExclude: ['**/README.md'],
+  // cleanUrls: true,
+  vite: {
+    build: {
+      minify: false
+    },
+    plugins: [
+      vueI18n({
+        include: resolve(
+          dirname(fileURLToPath(import.meta.url)),
+          '../locales/**'
+        ),
+        // jitCompilation: true,
+        // runtimeOnly: false,
+        ssr: true
+      })
+    ]
+  },
   ...mainInfo,
   head,
   lang: 'en',
   locales: {
-    '/': { lang: 'en', ...mainInfo },
-    '/ja/': { lang: 'ja', ...mainInfo }
+    root: {
+      lang: 'en',
+      ...mainInfo,
+      themeConfig: {
+        nav: [
+          {
+            text: 'Blog',
+            link: 'https://blog.intlify.dev'
+          },
+          {
+            text: 'GitHub',
+            link: 'https://github.com/intlify'
+          }
+        ]
+      }
+    },
+    ja: {
+      lang: 'ja',
+      ...mainInfo,
+      themeConfig: {
+        nav: [
+          {
+            text: 'ブログ',
+            link: 'https://blog.intlify.dev'
+          },
+          {
+            text: 'GitHub',
+            link: 'https://github.com/intlify'
+          }
+        ]
+      }
+    }
   },
   themeConfig: {
-    docsBranch: 'master',
-    logo: 'nav_logo.png',
+    logo: 'nav_logo.png'
+    /*
     locales: {
       '/': {
         nav: [
@@ -45,7 +95,9 @@ const config = {
         ]
       }
     }
-  },
+    */
+  }
+  /*
   customData: {
     projects: [
       {
@@ -96,8 +148,7 @@ const config = {
           logo: '/sponsors/crowdin.svg'
         }
       ],
-      sliver: [
-      ],
+      sliver: [],
       bronze: [
         {
           title: 'VueMastery',
@@ -112,6 +163,5 @@ const config = {
       ]
     }
   }
-}
-
-module.exports = config
+  */
+})

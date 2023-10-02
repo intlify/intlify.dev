@@ -1,51 +1,59 @@
 <script setup lang="ts">
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useSiteData, useRouter } from 'vitepress'
+import { computed } from 'vue'
+import { useRouter, useData, withBase } from 'vitepress'
 
-const LOCALE_INFO = {
+const LOCALE_INFO: Record<string, string> = {
   en: 'English',
   ja: '日本語'
-} as const
+}
 
 const router = useRouter()
-const siteData = useSiteData()
-const locales = Object.keys(siteData.value.locales).map(k => {
-  const lang = siteData.value.locales[k].lang
-  return { locale: lang, display: LOCALE_INFO[lang] }
+const { site, theme, page } = useData<{
+  logo: string
+  nav: { text: string; link: string }[]
+}>()
+
+const _locales = Object.keys(site.value.locales)
+  .map(k => site.value.locales[k].lang)
+  .filter(Boolean) as string[]
+const locales = _locales.map(lang => ({
+  locale: lang,
+  display: LOCALE_INFO[lang]
+}))
+
+const siteLogo = computed(() => {
+  return site.value.themeConfig.logo
 })
 
-const onChange = e => {
-  router.go(e.target.value === 'en' ? '/' : `/${e.target.value}/`)
-}
+const siteNav = computed(() => {
+  return site.value.themeConfig.nav
+})
+
+// DISABLE: const onChange = (e: Event) => {
+// DISABLE:   const target = e.target as HTMLInputElement
+// DISABLE:   router.go(target.value === 'en' ? '/' : `/${target.value}/`)
+// DISABLE: }
+/* eslint-enable @typescript-eslint/no-unused-vars */
 </script>
 
 <template>
   <nav class="navigation">
     <div class="logo">
-      <a
-        :aria-label="$site.title"
-        href="/"
-      >
-        <img
-          :src="$withBase($themeConfig.logo)"
-          :alt="$site.title"
-        />
+      <a :aria-label="site.title" href="/">
+        <img :src="withBase(siteLogo)" :alt="site.title" />
       </a>
     </div>
     <div class="menu">
-      <template v-for="{ text, link } in $themeConfig.nav">
-        <a
-          :href="link"
-          :aria-label="text" 
-          target="_blank"
-          rel="noopener"
-        >
+      <template v-for="{ text, link } in siteNav">
+        <a :href="link" :aria-label="text" target="_blank" rel="noopener">
           {{ text }}
         </a>
       </template>
+      <!-- DISABLE:
       <form class="locale">
         <select @change="onChange">
-          <option 
+          <option
             v-for="{ locale, display } in locales"
             :selected="$i18n.locale === locale"
             :value="locale"
@@ -54,7 +62,7 @@ const onChange = e => {
           </option>
         </select>
       </form>
-    </div>
+    --></div>
   </nav>
 </template>
 

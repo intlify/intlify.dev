@@ -1,13 +1,27 @@
-<script>/* eslint-disable @intlify/vue-i18n/no-raw-text */</script>
+<script setup lang="ts">
+import { computed } from 'vue'
+import { withBase, useData } from 'vitepress'
+
+const { frontmatter } = useData()
+
+const heroLogo = computed(() => {
+  /**
+   * NOTE: frontmatter doesn't seem to have a value in it when SSR...
+   */
+  return frontmatter.value.heroImage || 'hero_logo.png'
+})
+const heroAlt = computed(() => {
+  /**
+   * NOTE: frontmatter doesn't seem to have a value in it when SSR...
+   */
+  return frontmatter.value.heroAlt || 'Intlify'
+})
+</script>
 
 <template>
   <div class="inner">
     <figure class="left">
-      <img
-        class="hero-logo"
-        :src="$withBase($frontmatter.heroImage)"
-        :alt="$frontmatter.heroAlt"
-      />
+      <img class="hero-logo" :src="withBase(heroLogo)" :alt="heroAlt" />
     </figure>
     <div class="right">
       <h1 class="tagline">The Borderless<br />Internationalization</h1>

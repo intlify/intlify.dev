@@ -46,11 +46,7 @@ const { t } = useI18n({
         target="_blank"
         rel="noopener"
       >
-        <img
-          :class="tier"
-          :src="logo"
-          :alt="title"
-        />
+        <img :class="tier" :src="logo" :alt="title" />
       </a>
     </template>
   </div>
