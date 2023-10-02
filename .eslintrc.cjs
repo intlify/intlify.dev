@@ -7,14 +7,11 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue-libs/recommended',
     'plugin:vue/vue3-recommended',
     'plugin:@intlify/vue-i18n/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'prettier',
-    'prettier/vue',
-    'prettier/@typescript-eslint'
   ],
   plugins: ['@typescript-eslint'],
   parser: 'vue-eslint-parser',
@@ -33,6 +30,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     'vue/one-component-per-file': 'off',
+    'vue/multi-word-component-names': 'off',
     'vue/experimental-script-setup-vars': 'off',
     'vue/no-deprecated-props-default-this': 'off',
     'vue/require-v-for-key': 'off',

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useI18n } from 'vue-i18n'
 import Navigation from './Navigation.vue'
 import Hero from './Hero.vue'
 import Sponsor from './Sponsor.vue'
 import Project from './Project.vue'
 import Info from './Info.vue'
+import { data as customData } from './layout.data.js'
 
 const { t } = useI18n({
   inheritLocale: true
@@ -50,31 +50,13 @@ ja:
       <section class="sponsors layouts">
         <div class="inner">
           <h2>{{ t('SponsorTitle') }}</h2>
-          <Sponsor
-            :banners="$site.customData.sponsors.platinum"
-            tier="platinum"
-          />
-          <Sponsor
-            :banners="$site.customData.sponsors.special"
-            tier="special"
-          />
-          <Sponsor
-            :banners="$site.customData.sponsors.gold"
-            tier="gold"
-          />
-          <Sponsor
-            :banners="$site.customData.sponsors.sliver"
-            tier="silver"
-          />
-          <Sponsor
-            :banners="$site.customData.sponsors.bronze"
-            tier="bronze"
-          />
-          <a
-            class="button"
-            href="https://github.com/sponsors/kazupon?o=esc"
-          >
-            {{ t('SponsorButton' )}}
+          <Sponsor :banners="customData.sponsors.platinum" tier="platinum" />
+          <Sponsor :banners="customData.sponsors.special" tier="special" />
+          <Sponsor :banners="customData.sponsors.gold" tier="gold" />
+          <Sponsor :banners="customData.sponsors.sliver" tier="silver" />
+          <Sponsor :banners="customData.sponsors.bronze" tier="bronze" />
+          <a class="button" href="https://github.com/sponsors/kazupon?o=esc">
+            {{ t('SponsorButton') }}
           </a>
         </div>
       </section>
@@ -82,12 +64,9 @@ ja:
       <section class="projects layouts">
         <div class="inner">
           <h2>{{ t('ProjectTitle') }}</h2>
-          <Project :banners="$site.customData.projects" />
-          <a
-            class="button"
-            href="https://github.com/intlify"
-          >
-            {{ t('ProjectButton' )}}
+          <Project :banners="customData.projects" />
+          <a class="button" href="https://github.com/intlify">
+            {{ t('ProjectButton') }}
           </a>
         </div>
       </section>

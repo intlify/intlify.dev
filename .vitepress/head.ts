@@ -1,7 +1,6 @@
-/**
- @type {UserConfig['head']}
- */
-const head = [
+import type { HeadConfig } from 'vitepress'
+
+export const head: HeadConfig[] = [
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ['meta', { name: 'twitter:site', content: '@intlify' }],
   ['meta', { name: 'twitter:url', content: 'https://intlify.dev' }],
@@ -34,11 +33,8 @@ const head = [
 if (process.env.NODE_ENV === 'production') {
   head.push([
     'script',
-    {
-      src: 'https://unpkg.com/thesemetrics@latest',
-      async: ''
-    }
+    { src: 'https://unpkg.com/thesemetrics@latest', async: '' }
   ])
 }
 
-module.exports = head
+export default head

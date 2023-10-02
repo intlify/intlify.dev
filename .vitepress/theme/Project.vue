@@ -17,11 +17,7 @@ defineProps<{
         target="_blank"
         rel="noopener"
       >
-        <img
-          class="common"
-          :src="logo"
-          :alt="title"
-        />
+        <img class="common" :src="logo" :alt="title" />
       </a>
     </template>
   </div>

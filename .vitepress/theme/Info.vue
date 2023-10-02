@@ -1,12 +1,11 @@
 <script setup lang="ts">
-/* eslint-disable @typescript-eslint/no-unused-vars, @intlify/vue-i18n/no-raw-text */
 const current = new Date().getFullYear()
 </script>
 
 <template>
   <section class="py-16">
     <p class="text-white text-center">
-      Released under the 
+      Released under the
       <a
         href="https://opensource.org/licenses/MIT"
         target="_blank"
