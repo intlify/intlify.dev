@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import './tailwind.css'
 import './style.css'
 import Layout from './Layout.vue'
@@ -46,3 +47,5 @@ export default {
     */
   }
 } satisfies Theme
+
+/* eslint-enable @typescript-eslint/no-unused-vars */

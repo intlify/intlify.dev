@@ -11,7 +11,7 @@ module.exports = {
     'plugin:@intlify/vue-i18n/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'prettier',
+    'prettier'
   ],
   plugins: ['@typescript-eslint'],
   parser: 'vue-eslint-parser',
@@ -34,10 +34,13 @@ module.exports = {
     'vue/experimental-script-setup-vars': 'off',
     'vue/no-deprecated-props-default-this': 'off',
     'vue/require-v-for-key': 'off',
-    'vue/html-self-closing': ['error', {
-      html: {
-        void: 'always'
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'always'
+        }
       }
-    }]
+    ]
   }
 }

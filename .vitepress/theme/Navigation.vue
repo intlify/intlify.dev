@@ -1,4 +1,5 @@
 <script setup lang="ts">
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { computed } from 'vue'
 import { useRouter, useData, withBase } from 'vitepress'
 
@@ -33,6 +34,7 @@ const siteNav = computed(() => {
 // DISABLE:   const target = e.target as HTMLInputElement
 // DISABLE:   router.go(target.value === 'en' ? '/' : `/${target.value}/`)
 // DISABLE: }
+/* eslint-enable @typescript-eslint/no-unused-vars */
 </script>
 
 <template>
