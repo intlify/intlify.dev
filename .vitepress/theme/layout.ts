@@ -17,6 +17,11 @@ export default {
         title: 'ZenArchitects',
         link: 'https://zenarchitects.co.jp',
         logo: '/sponsors/zenarchitects.png'
+      },
+      {
+        name: 'Microsoft',
+        link: 'https://www.microsoft.com/',
+        logo: '/sponsors/microsoft.webp'
       }
     ],
     special: [

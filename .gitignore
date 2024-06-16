@@ -7,4 +7,4 @@ dist-ssr
 *~
 *.local
 .vscode
-cache
+.vitepress/cache/**
