@@ -59,6 +59,11 @@ export default {
         title: 'Froggly',
         link: 'https://froggly.pl/',
         logo: '/sponsors/Froggly.svg'
+      },
+      {
+        title: 'LanguageMonster',
+        link: 'https://languagemonster.com/',
+        logo: '/sponsors/LanguageMonster.svg'
       }
     ]
   }
