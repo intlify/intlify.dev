@@ -64,6 +64,11 @@ export default {
         title: 'LanguageMonster',
         link: 'https://languagemonster.com/',
         logo: '/sponsors/LanguageMonster.svg'
+      },
+      {
+        title: 'Route Optimizer and Route Planner Software"',
+        link: 'https://route4me.com',
+        logo: '/sponsors/Route4Me.png'
       }
     ]
   }
