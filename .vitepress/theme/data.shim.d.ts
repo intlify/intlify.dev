@@ -5,16 +5,8 @@ declare module './layout.data.js' {
     logo: string
   }
   interface Project extends Model {}
-  interface Sponsor extends Model {}
   type Data = {
     projects: Project[]
-    sponsors: {
-      platinum: Sponsor[]
-      special: Sponsor[]
-      gold: Sponsor[]
-      sliver: Sponsor[]
-      bronze: Sponsor[]
-    }
   }
   const data: Data = {}
   export { data }

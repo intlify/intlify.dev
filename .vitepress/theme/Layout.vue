@@ -2,7 +2,6 @@
 import { useI18n } from 'vue-i18n'
 import Navigation from './Navigation.vue'
 import Hero from './Hero.vue'
-import Sponsor from './Sponsor.vue'
 import Project from './Project.vue'
 import Info from './Info.vue'
 import { data as customData } from './layout.data.js'
@@ -50,12 +49,13 @@ ja:
       <section class="sponsors layouts">
         <div class="inner">
           <h2>{{ t('SponsorTitle') }}</h2>
-          <Sponsor :banners="customData.sponsors.platinum" tier="platinum" />
-          <Sponsor :banners="customData.sponsors.special" tier="special" />
-          <Sponsor :banners="customData.sponsors.gold" tier="gold" />
-          <Sponsor :banners="customData.sponsors.sliver" tier="silver" />
-          <Sponsor :banners="customData.sponsors.bronze" tier="bronze" />
-          <a class="button" href="https://github.com/sponsors/kazupon?o=esc">
+          <a href="https://github.com/sponsors/kazupon">
+            <img
+              src="https://raw.githubusercontent.com/kazupon/sponsors/refs/heads/main/sponsors.svg"
+              alt="kazupon's sponsors"
+            />
+          </a>
+          <a class="button" href="https://github.com/sponsors/kazupon">
             {{ t('SponsorButton') }}
           </a>
         </div>
