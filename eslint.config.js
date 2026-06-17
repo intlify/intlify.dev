@@ -5,7 +5,14 @@ import eslintConfigPrettier from 'eslint-config-prettier'
 import vueParser from 'vue-eslint-parser'
 
 export default [
-  { ignores: ['dist/**', 'public/**', '.vitepress/cache/**', '.vitepress/dist/**'] },
+  {
+    ignores: [
+      'dist/**',
+      'public/**',
+      '.vitepress/cache/**',
+      '.vitepress/dist/**'
+    ]
+  },
 
   ...pluginVue.configs['flat/recommended'],
   ...tseslint.configs.recommended,
