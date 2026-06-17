@@ -4,7 +4,7 @@ declare module './layout.data.js' {
     link: string
     logo: string
   }
-  interface Project extends Model {}
+  type Project = Model
   type Data = {
     projects: Project[]
   }
