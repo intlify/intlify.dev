@@ -9,7 +9,7 @@
     "email": "kawakazu80@gmail.com"
   },
   "type": "module",
-  "packageManager": "pnpm@8.8.0",
+  "packageManager": "pnpm@11.7.0",
   "engines": {
     "node": ">= 20"
   },
