@@ -26,7 +26,7 @@ export default [
     settings: {
       'vue-i18n': {
         localeDir: '.vitepress/locales/*.json',
-        messageSyntaxVersion: '^9.0.0'
+        messageSyntaxVersion: '^11.0.0'
       }
     }
   },
