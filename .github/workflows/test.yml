@@ -7,6 +7,9 @@ on:
 env:
   CI: true
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: "Test on Node.js ${{ matrix.node }} OS: ${{matrix.os}}"
@@ -17,13 +20,15 @@ jobs:
         node: [22]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          persist-credentials: false
 
       - name: Enable corepack
         run: corepack enable
 
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
